@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-container">
+
+        <h1>Contact Us</h1>
+   
+        <section id="name">
+            <div class="info">
+                <label for="first-name">First Name *</label>
+                <input id="first-name" name="first-name" type="text" required>
+            </div>
+            <div class="info">
+                <label for="last-name">Last Name *</label>
+                <input id="last-name" name="last-name" type="text" required>
+            </div>
+        </section>
+
+        <section id="mail">
+            <label for="email">Email Address *</label>
+            <input id="email" name="email" type="email" required>
+        </section>
+
+        <section id="query">
+            <label>Query Type *</label>
+            <div id="info-container">
+                <div class="query-info">
+                    <input id="general-query" name="query-type" type="radio">
+                    <label for="general-query">General Enquiry</label>
+                </div>
+                <div class="query-info">
+                    <input id="support-request" name="query-type" type="radio">
+                    <label for="support-request">Support Request</label>
+                </div>
+            </div>
+        </section>
+
+        <section id="message-section">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+        </section>
+
+        <section id="consent-section">
+            <input id="consent" type="checkbox" required>
+            <label for="consent">I consent to being contacted by the team *</label>
+        </section>
+
+        <button id="submit" type="submit" value="Submit">Submit</button>
+
+    </div>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

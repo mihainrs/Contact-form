@@ -1,0 +1,189 @@
+:root {
+    --Greenlighter: hsl(148, 38%, 91%);
+    --Greenmedium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+    --White: hsl(0, 0%, 100%);
+    --Greymedium: hsl(186, 15%, 59%);
+    --Greydarker: hsl(187, 24%, 22%);
+}
+
+*:not(h1) {
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Greenlighter);
+}
+
+/* the entire form */
+
+#main-container {
+    margin-top: 10em;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 20px;
+    padding: 0.5em 2em 1.5em 2em;
+    border-radius: 15px;
+}
+
+/* the title of the form, using h1 since I've got no other headers in the code */
+
+h1 {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: -1px;
+}
+
+/* input containers */
+
+input{
+    padding:0.5em;
+    border:1px solid var(--Greymedium);
+    border-radius:5px;
+    cursor: pointer;
+}
+
+input:hover{
+    border-color:var(--Greenmedium);
+}
+
+/* the part with the name input */
+
+#name {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
+/* email part */
+
+#mail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Query type selection */
+
+#info-container {
+    display: flex;
+    gap: 10px;
+}
+
+.query-info {
+    border: 1px solid var(--Greymedium);
+    padding: 0.5em 5em 0.5em 1em;
+    margin-top: 10px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.query-info>label{
+    cursor: pointer;
+}
+
+/* Message box */
+
+#message-section{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#message{
+    width: 500px;
+    height:90px;
+    resize:none;
+    border-radius:5px;
+}
+
+/* consent part */
+
+#consent{
+ margin:1em 0;
+ accent-color: var(--Greenmedium);
+}
+
+#consent-section>label{
+    cursor: pointer;
+}
+
+/* Submit button */
+
+#submit{
+    border:none;
+    background-color:var(--Greenmedium);
+    color:var(--White);
+    border-radius:5px;
+    padding:0.9em 0;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color:var(--Greydarker);
+}
+
+/* mobile responsiveness */
+
+@media only screen and (max-width:425px){
+   body, html{
+    overflow-x:hidden;
+    margin-top:-2.5em;
+   }
+
+   #main-container{
+    margin:-20em 1em 2em 1em;
+   }
+
+   #name{
+    flex-direction: column;
+   }
+   
+
+   #info-container{
+    flex-direction: column;
+   }
+
+    .query-info{
+        padding:10px 0 10px 1em;
+    }
+
+   #message{
+    width: auto;
+    height:250px;
+   }
+
+   #consent-section{
+    display:flex;
+    gap:1em;
+   }
+
+}
+
+
+/* smaller screens */
+
+@media only screen and (max-width:1440px){
+    #main-container{
+        margin-top:7em;
+    }
+}
