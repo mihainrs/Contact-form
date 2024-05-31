@@ -13,55 +13,72 @@
 </head>
 
 <body>
-    <div id="main-container">
+    <section id="success">
+        <div id="message-sent">
+            <img src="/assets/images/icon-success-check.svg" alt="success">
+            <h2>Message sent!</h2>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon.</p>
+    </section>
+
+    <form id="main-container">
 
         <h1>Contact Us</h1>
-   
+
         <section id="name">
             <div class="info">
                 <label for="first-name">First Name *</label>
-                <input id="first-name" name="first-name" type="text" required>
+                <input id="first-name" name="first-name" type="text" >
+                <div class="errorMessage">This Field is required</div>
             </div>
             <div class="info">
                 <label for="last-name">Last Name *</label>
-                <input id="last-name" name="last-name" type="text" required>
+                <input id="last-name" name="last-name" type="text" >
+                <div class="errorMessage">This Field is required</div>
             </div>
         </section>
 
         <section id="mail">
             <label for="email">Email Address *</label>
-            <input id="email" name="email" type="email" required>
+            <input id="email" name="email" type="email" >
+            <div class="errorMessage">Please enter a valid email address</div>
         </section>
 
         <section id="query">
             <label>Query Type *</label>
+            
             <div id="info-container">
                 <div class="query-info">
                     <input id="general-query" name="query-type" type="radio">
                     <label for="general-query">General Enquiry</label>
                 </div>
+
                 <div class="query-info">
                     <input id="support-request" name="query-type" type="radio">
                     <label for="support-request">Support Request</label>
                 </div>
-            </div>
+                
+                </div>
+                <div class="errorMessage">Please select a query type</div>
+                <div class="errorMessage" hidden>Please select a query type</div>
         </section>
+        
 
         <section id="message-section">
             <label for="message">Message *</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" ></textarea>
+            <div class="errorMessage">This field is required</div>
         </section>
 
         <section id="consent-section">
-            <input id="consent" type="checkbox" required>
-            <label for="consent">I consent to being contacted by the team *</label>
+            <input id="consent" type="checkbox">
+            <label for="consent">I consent to being contacted by the team*</label>
         </section>
+        <div class="errorMessage">To submit this form, please consent to being contacted</div>
 
         <button id="submit" type="submit" value="Submit">Submit</button>
-
-    </div>
+    </form>
     <script src="scripts.js"></script>
-
 </body>
 
 </html>
